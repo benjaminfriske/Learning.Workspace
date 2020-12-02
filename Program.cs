@@ -6,7 +6,23 @@ namespace Learning.Workspace
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            PrintService printService = new PrintService();
+            Printer p1 = new Printer(printService.PrintAnything);
+            Printer p2 = printService.PrintAnything;
+
+            p1("Hello");
+            p2("World");
+        }
+
+        
+    }
+    public class PrintService
+    {
+        public void PrintAnything(object obj)
+        {
+            Console.WriteLine(obj);
         }
     }
+
+    public delegate void Printer(string message);
 }
