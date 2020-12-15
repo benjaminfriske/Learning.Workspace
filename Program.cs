@@ -1,4 +1,6 @@
-﻿using Learning.Workspace.Classtime;
+﻿using Learning.Workspace.Classroom;
+using Learning.Workspace.Playground;
+using System;
 
 namespace Learning.Workspace
 {
@@ -6,14 +8,15 @@ namespace Learning.Workspace
     {
         static void Main(string[] args)
         {
-            DelegateClass printService = new DelegateClass();
-            Printer p1 = new Printer(printService.PrintAnything);
-            Printer p2 = printService.PrintAnything;
-            Printer p3 = printService.GenericString;
-            p1("Hello");
-            p2("World");
-        }   
-    }
+            foreach(var value in Lesson2.CreateSimpleIterator())
+            {
+                Console.WriteLine("Lazy Evaluation");
+            }
 
-    
+            foreach (var value in Lesson2.CreateSimpleList())
+            {
+                Console.WriteLine("Not Lazy Loaded");
+            }
+        }
+    }
 }
