@@ -13,6 +13,7 @@ namespace Learning.Workspace.Playground
                 Console.WriteLine("10");
                 yield return 5;
                 Console.WriteLine("5");
+                // throw(new NotImplementedException());
                 yield return 25;
                 Console.WriteLine("25");
             }
@@ -30,6 +31,7 @@ namespace Learning.Workspace.Playground
             Console.WriteLine("10");
             test.Add(5);
             Console.WriteLine("5");
+            throw(new NotImplementedException());
             test.Add(25);
             Console.WriteLine("25");
             return test;

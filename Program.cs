@@ -8,15 +8,23 @@ namespace Learning.Workspace
     {
         static void Main(string[] args)
         {
-            foreach(var value in Lesson2.CreateSimpleIterator())
+            try
             {
-                Console.WriteLine("Lazy Evaluation");
-            }
+                foreach (var value in Lesson2.CreateSimpleIterator())
+                {
+                    Console.WriteLine("Lazy Evaluation");
+                }
 
-            foreach (var value in Lesson2.CreateSimpleList())
-            {
-                Console.WriteLine("Not Lazy Loaded");
+                foreach (var value in Lesson2.CreateSimpleList())
+                {
+                    Console.WriteLine("Not Lazy Loaded");
+                }
             }
+            catch(Exception e)
+            {
+                Console.WriteLine($"Error: {e.Message}");
+            }
+            
         }
     }
 }
