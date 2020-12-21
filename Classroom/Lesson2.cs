@@ -1,8 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Learning.Workspace.Playground
+namespace Learning.Workspace.Classroom
 {
+    /// <summary>
+    /// try
+    //  {
+    //      foreach (var value in Lesson2.CreateSimpleIterator())
+    //      {
+    //          Console.WriteLine("Lazy Evaluation");
+    //      }
+
+    //      foreach (var value in Lesson2.CreateSimpleList())
+    //      {
+    //          Console.WriteLine("Not Lazy Loaded");
+    //      }
+    //  }
+    //  catch(Exception e)
+    //  {
+    //      Console.WriteLine($"Error: {e.Message}");
+    //  }
+    /// </summary>
     public static class Lesson2
     {
         public static IEnumerable<int> CreateSimpleIterator()
