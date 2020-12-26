@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Learning.Workspace.Playground
+namespace Learning.Workspace.Classroom
 {
     public partial class Lesson3
     {
