@@ -5,6 +5,8 @@ namespace Learning.Workspace.Playground
 {
     public class Lesson4
     {
+        public static int outerActionCounter;
+        public static int innerActionCounter;
         public static List<Action> CreateCountingActions()
         {
             List<Action> actions = new List<Action>();
@@ -14,7 +16,8 @@ namespace Learning.Workspace.Playground
                 int innerCounter = 0;
                 Action action = () =>
                 {
-                    Console.WriteLine($" Outer: {outerCounter} Inner: {innerCounter}");
+                    outerActionCounter = outerCounter;
+                    innerActionCounter = innerCounter;
                     outerCounter++;
                     innerCounter++;
                 };
