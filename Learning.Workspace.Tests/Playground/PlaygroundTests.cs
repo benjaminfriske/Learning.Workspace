@@ -31,5 +31,24 @@ namespace Learning.Workspace.Tests.Playground
             Assert.AreEqual(Lesson4.outerActionCounter, 3);
             Assert.AreEqual(Lesson4.innerActionCounter, 1);
         }
+
+        [TestMethod]
+        public void SimpleOptionalNamedArgument_TestAllDifferentWays_ThisMakesOptionialFlexible()
+        {
+            Lesson4 test = new Lesson4();
+            bool didItFail = false;
+            try
+            {
+                test.SimpleOptionalNamedArgument("hello world!");
+                test.SimpleOptionalNamedArgument(arg1: "", arg3: 10); 
+                test.SimpleOptionalNamedArgument("this works too!", "only arg 2 set."); 
+                test.SimpleOptionalNamedArgument("wow this is index, but 3rd argument is named.", arg3: 25);
+                didItFail = false;
+            }
+            finally
+            {
+                Assert.IsFalse(didItFail);
+            }
+        }
     }
 }

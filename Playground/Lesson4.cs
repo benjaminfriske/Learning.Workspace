@@ -25,5 +25,13 @@ namespace Learning.Workspace.Playground
             }
             return actions;
         }
+
+        public void SimpleOptionalNamedArgument(string arg1, string arg2 = "test", int arg3 = 3)
+        {
+            // This method can be called many ways.
+            Console.WriteLine($"Argument 1: {arg1}");
+            Console.WriteLine($"Argument 2: {arg2}");
+            Console.WriteLine($"Argument 3: {arg3}");
+        }
     }
 }
