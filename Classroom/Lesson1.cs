@@ -12,6 +12,7 @@ namespace Learning.Workspace.Classroom
         /// Printer p3 = printService.GenericString;
         /// p1("Hello");
         /// p2("World");
+        /// This is a test.
         /// </summary>
         public Lesson1()
         {
